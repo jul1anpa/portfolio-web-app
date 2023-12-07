@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block content %}
+<form action="mailto:" method="POST" enctype="text/plain">
+    <label for="name">Name:</label>
+    <input class="input-window" type="text" id="name" name="Name" placeholder=">>> Begin here..." required><br>
+
+    <label for="company">Company:</label>
+    <input class="input-window" type="text" id="company" company="Company"><br>
+
+    <label for="phone">Phone Number:</label>
+    <input class="input-window" type="tel" id="phone" phone="Phone"><br>
+
+    <label for="email">Email:</label>
+    <input class="input-window" type="email" id="email" email="Email" required><br>
+
+    <label for="message">Message:</label>
+    <textarea class="input-window" id="message" name="Message"></textarea><br>
+
+    <input class="input.glow" type="submit" value="Submit">
+</form>
+{% endblock %}

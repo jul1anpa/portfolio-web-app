@@ -1,0 +1,229 @@
+/* Global elements */
+* { font-family: 'Monaco', monospace; 
+}
+
+.bg { background-image: url("../images/background2.svg");
+background-size: cover;
+background-repeat: no-repeat;
+width: 100vw;
+height: 100vh;
+}
+
+/* Title elements */
+.title { font-size: 300%;
+text-align: center;
+color: #ffffff;
+transition: transform 10s ease-in-out;
+position: relative;
+}
+
+.title a { color: inherit;
+text-decoration: none;
+}
+
+.title:hover {
+    transform: scale(1.2);
+}
+
+/* Introduction elements */
+.intro-container { display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+max-width: 50%;
+margin: 0 auto;
+background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+backdrop-filter: blur(10px);
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.intro { display: flex;
+justify-content: center;
+color: #393939;
+height: auto;
+width: 80%;
+padding: 20px;
+}
+
+/* Skills page elements */
+@keyframes grow {
+from {
+    transform: scale(0);
+}
+to {
+    transform: scale(1);
+}
+}
+
+table { display: table;
+width: 50%;
+margin: 0 auto;
+background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+backdrop-filter: blur(10px);
+border-collapse: collapse;
+margin-top: 100px;
+animation: grow 0.5s ease-out;
+}
+
+th, td { text-align: left;
+padding: 8px;
+padding-left: 30px;
+padding-right: 30px;
+display: table-cell;
+}
+
+th { font-weight: bold;
+}
+
+/* Contact Page */
+@keyframes glow {
+0% { box-shadow: 0 0 0px #fff; }
+50% { box-shadow: 0 0 10px #fff; }
+100% { box-shadow: 0 0 0px #fff; }
+}
+
+form { display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+max-width: 25%;
+max-height: 50%;
+margin: auto;
+background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+backdrop-filter: blur(10px);
+position: relative;
+padding: 15px;
+padding-top: 30px;
+padding-bottom: 25px;
+animation: grow 0.5s ease-out;
+}
+
+.input-window {
+background-color: rgba(255, 255, 255, 0.7);
+border: none;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+color: #333;
+padding: 10px;
+opacity: 0.8;
+display: flex;
+position:relative;
+}
+  
+input[type="text"]:hover,
+input[type="text"]:focus {
+box-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Last entry */
+input[type="submit"].glow {
+animation: glow 1s infinite;
+}
+
+/* Navigation elements */
+
+.navbar { position: absolute;
+bottom: 0;
+width: 100%;
+}
+
+.parent-div {
+width: 100%;
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+bottom: 0;
+}
+
+.buttons {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+gap: 1px 60px;
+justify-content: center;
+align-items: center;
+grid-template-areas:
+"button1 button2 button3 button4";
+}
+
+.button {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+border: none;
+width: 150px;
+height: 75px;
+background-color: transparent;
+color: white;
+font-size: 1.2rem;
+text-decoration: none;
+transition: transform 0.2s ease-in-out;
+}
+
+.button:hover {
+transform: scale(1.2);
+}
+
+.button::before,
+.button::after {
+content: "";
+position: absolute;
+top: 50%;
+width: 5px;
+height: 20px;
+transform: scaleY(1.5);
+margin-top: -10px;
+border: 2px solid white;
+}
+
+.button::before {
+left: -9px;
+border-top-left-radius: 3px;
+border-bottom-left-radius: 3px;
+border-right: none;
+}
+
+.button::after {
+right: -9px;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+border-left: none;
+}
+
+.button.b1 {
+grid-area: button1;
+}
+
+.button.b2 {
+grid-area: button2;
+}
+
+.button.b3 {
+grid-area: button3;
+}
+
+.button.b4 {
+grid-area: button4;
+}
+
+.button:hover::before,
+.button:hover::after {
+transform: scaleY(1.5);
+}
+
+.button a {
+color: inherit;
+text-decoration: none;
+}

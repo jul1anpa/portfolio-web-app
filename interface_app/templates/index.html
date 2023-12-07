@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A software development portfolio website created by Julian Payne to display various skills in programming, data manipulation, and design principles.">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var typed = new Typed('.intro p', {
+        strings: ['>>>My name is <strong style="color:#000000">Julian Payne</strong>!<br> I\'m a student at Ivy Tech Community College studying software development.<br> I reside in Indianapolis, Indiana and plan to continue learning and evolving my skillset as I near graduation.<br> I created this website in Django to serve as a resource for those who would like to engage with me or view projects I have worked on.<br> Thank you for visiting!'],
+        typeSpeed: 20,
+        backSpeed: 0,
+        loop: false,
+        showCursor: false,
+      });
+    });
+  </script>
+</head>
+
+<body class="bg">
+    <div>
+        <h1 class="title"><a href="{% url 'index' %}">Hello, world! ;)</a></h1>
+    </div>
+    {% block content %}
+    {% endblock %}
+<footer>
+    <nav>
+        <div class="parent-div">
+            <div class="buttons">
+                <h1 class="button b1"><a href="{% url 'skills' %}">Skills</a></h1>
+                <h1 class="button b2"><a href="{% url 'projects' %}">Projects</a></h1>
+                <h1 class="button b3"><a href="{% url 'contact' %}">Contact!</a></h1>
+                <h1 class="button b4"><a href="{% url 'pybot' %}">Pybot</a></h1>
+            </div>
+        </div>
+    </nav>
+</footer>
+</body>
+</html>
